@@ -72,7 +72,7 @@ section[id], #produtos { scroll-margin-top: 24px; }
 .hero__intro { min-width: 0; display: grid; gap: 24px; }
 .hero__meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 24px; }
 .hero__eyebrow { margin: 0; display: flex; align-items: center; gap: 10px; color: var(--color-muted); font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
-.hero__location { margin: 0; color: var(--color-muted); font-size: 12px; font-weight: 500; }
+.hero__location { position: absolute; top: 16px; right: var(--gutter); margin: 0; color: var(--color-muted); font-size: 12px; font-weight: 500; }
 .hero__mark { width: 8px; height: 8px; flex: 0 0 auto; background: var(--color-accent); }
 .hero__title { min-width: 0; max-width: 14ch; margin: 0; font-size: clamp(40px, 4.8vw, 64px); line-height: 1.06; letter-spacing: -0.04em; font-weight: 600; text-wrap: balance; }
 .hero__details { min-width: 0; display: grid; gap: 28px; }
@@ -87,6 +87,9 @@ section[id], #produtos { scroll-margin-top: 24px; }
 @media (min-width: 48rem) {
   .hero__layout { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: clamp(24px, 4vw, 56px); }
   .hero__graphic { height: clamp(300px, 36vw, 460px); }
+}
+@media (min-width: 64rem) {
+  .hero__layout { padding-top: calc(clamp(40px, 5vw, 72px) - 24px); }
 }
 .services__card, .services__card *, .benefits__item { box-sizing: border-box; }
 
