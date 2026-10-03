@@ -10,7 +10,7 @@ Node.js 22.12 ou superior. Execute npm install, npm run dev e abra a URL indicad
 
 Preencha src/config/site.ts apenas com informações confirmadas: origem HTTPS pública, WhatsApp com DDI/DDD, telefone de apresentação, e-mail, endereço, CNPJ e URL da CYMH. socialImage aceita o caminho local de uma imagem PNG/JPEG/WebP real, por exemplo /images/social.png somente quando esse arquivo existir em public/images; até lá não é anunciado um card com imagem. O estado inicial é para revisão local: noindex, robots bloqueando indexação, sitemap sem URL e CTA final desativado com aviso. Configurar uma origem ativa canonical, URLs de OG/Twitter, sitemap da home e robots permitindo indexação; faça isso apenas junto do conteúdo real e da revisão visual. Não há domínio ou contato deduzido.
 
-Pendências editoriais: preço e prazo de referência, horário/prazo de resposta, escopo comercial definitivo, status de produtos, foto autorizada de Maringá, capturas reais da CYMH, evidências de consultas com contexto/data, depoimento autorizado e imagem social raster. O relato de observações do caso não é garantia de ranking. Nenhum placeholder deve ser confundido com dado ou prova real. Os recursos gráficos e a fonte são locais.
+Pendências editoriais: horário/prazo de resposta, escopo comercial definitivo, status de produtos, foto autorizada de Maringá, capturas reais da CYMH, evidências de consultas com contexto/data, depoimento autorizado e imagem social raster. O relato de observações do caso não é garantia de ranking. Nenhum placeholder deve ser confundido com dado ou prova real. Os recursos gráficos e a fonte são locais.
 
 ## Estrutura e próximos caminhos
 
