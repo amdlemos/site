@@ -161,7 +161,19 @@ section[id], #produtos { scroll-margin-top: 24px; }
   .services__deliverables li::before { content: ''; flex: 0 0 auto; width: 6px; height: 6px; background: var(--color-accent); }
   .services__card--support .services__deliverables li::before { background: var(--color-accent-light); }
   .services__products { margin-top: 0; padding: 22px var(--gutter) 0; border-top: 0; }
-  .benefits__number { border-radius: 4px; }
+  /* Mobile: os quatro benefícios coexistem num tabuleiro de duas colunas que sangra até as bordas; a coluna
+     direita desce um degrau, então a silhueta é um encaixe (pente) em vez de uma pilha. Xadrez superfície/grafite. */
+  .benefits__layout { padding-bottom: 56px; gap: 32px; }
+  .benefits__grid { --step: 52px; grid-template-columns: 1fr 1fr; gap: 0; margin: 0 calc(-1 * var(--gutter)); }
+  .benefits__item { display: flex; flex-direction: column; padding: 18px 14px 28px var(--gutter); border-top: 0; background: var(--color-surface); }
+  .benefits__item:nth-child(even) { margin-top: var(--step); padding: 18px var(--gutter) 28px 14px; }
+  .benefits__item:nth-child(2), .benefits__item:nth-child(3) { background: var(--color-ink); color: var(--color-dark-text); }
+  .benefits__item:nth-child(2) .benefits__copy, .benefits__item:nth-child(3) .benefits__copy { color: var(--color-dark-secondary); }
+  .benefits__number { width: auto; height: auto; justify-content: flex-start; margin-bottom: 40px; background: transparent; border: 0; border-radius: 0; color: var(--color-muted); font-size: 12px; letter-spacing: 0.08em; }
+  .benefits__item:nth-child(2) .benefits__number, .benefits__item:nth-child(3) .benefits__number { color: var(--color-accent-light); }
+  .benefits__subtitle { margin: 0 0 10px; font-size: clamp(19px, 5.6vw, 24px); line-height: 1.12; }
+  .benefits__copy { font-size: 14px; line-height: 1.5; }
+  .benefits__item:nth-child(4) { margin-bottom: 0; }
 }
 @media (min-width: 48rem) {
   .services__grid { grid-template-columns: repeat(12, minmax(0, 1fr)); }
