@@ -7,6 +7,7 @@ interface Props {
   description?: string;
 }
 const { title = site.title, description = site.description } = Astro.props;
+const base = import.meta.env.BASE_URL;
 const canonical = origin ? new URL(Astro.url.pathname, origin).href : '';
 if (site.socialImage && !/^\/(?!\/)[^?#]+\.(png|jpe?g|webp)$/i.test(site.socialImage)) {
   throw new Error('site.socialImage deve ser um caminho local PNG/JPEG/WebP.');
@@ -47,8 +48,8 @@ const structuredData = JSON.stringify(organization).replace(/</g, '\\u003c');
     <meta name="twitter:description" content={description} />
     {socialImage && <meta name="twitter:image" content={socialImage} />}
     {socialImage && <meta name="twitter:image:alt" content="AMDLEMOS — o ponto verde no traçado" />}
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <link rel="preload" href="/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="icon" href={`${base}favicon.svg`} type="image/svg+xml" />
+    <link rel="preload" href={`${base}fonts/instrument-sans-latin.woff2`} as="font" type="font/woff2" crossorigin />
     <script type="application/ld+json" is:inline set:html={structuredData} />
   </head>
   <body>
