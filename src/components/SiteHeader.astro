@@ -4,6 +4,8 @@ import Brand from './Brand.astro';
 <div class="header__layout">
 <header class="header__layout-2">
 <a href="/" aria-label="AMDLEMOS — início" class="brand-link"><Brand /></a>
+<button type="button" class="header__toggle" aria-expanded="false" aria-controls="menu-principal" hidden>Menu<svg viewBox="0 0 16 16" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" focusable="false"><path d="M2 4.5h12M2 8h12M2 11.5h12"></path></svg></button>
+<div class="header__panel" id="menu-principal">
 <nav aria-label="Principal" class="header__nav">
 <a href="#servicos" class="header__link">Serviços</a>
 <a href="#caso" class="header__link">Caso real</a>
@@ -12,5 +14,26 @@ import Brand from './Brand.astro';
 <a href="#duvidas" class="header__link">Dúvidas</a>
 </nav>
 <a href="#contato" class="header__link-2">Falar no WhatsApp</a>
+</div>
 </header>
 </div>
+<script is:inline>
+  (function () {
+    var btn = document.querySelector('.header__toggle');
+    var panel = document.getElementById('menu-principal');
+    if (!btn || !panel) return;
+    var mq = matchMedia('(max-width: 63.999rem)');
+    function set(open) { btn.setAttribute('aria-expanded', String(open)); panel.hidden = !open; }
+    function sync() {
+      btn.hidden = !mq.matches;
+      if (mq.matches) set(false); else { panel.hidden = false; btn.setAttribute('aria-expanded', 'false'); }
+    }
+    btn.addEventListener('click', function () { set(btn.getAttribute('aria-expanded') !== 'true'); });
+    panel.addEventListener('click', function (e) { if (mq.matches && e.target.closest('a')) set(false); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && mq.matches && btn.getAttribute('aria-expanded') === 'true') { set(false); btn.focus(); }
+    });
+    mq.addEventListener('change', sync);
+    sync();
+  })();
+</script>

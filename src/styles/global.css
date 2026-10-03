@@ -26,7 +26,7 @@
   --font-hero: clamp(42px, 6.4vw, 92px);
   --font-section: clamp(30px, 3.4vw, 46px);
   --content-width: 1240px;
-  --gutter: clamp(20px, 5vw, 64px);
+  --gutter: clamp(16px, 5vw, 64px);
   --section-space: clamp(56px, 7vw, 112px);
   --radius-small: 3px;
 }
@@ -64,6 +64,18 @@ section[id], #produtos { scroll-margin-top: 24px; }
 .header__nav { display: flex; flex-wrap: wrap; gap: 4px 28px; font-size: 15px; font-weight: 500; order: 3; flex: 1 1 auto; justify-content: center; }
 .header__link { color: var(--color-muted); text-decoration: none; padding: 10px 0; }
 .header__link-2 { order: 4; background: var(--color-ink); color: var(--color-white); text-decoration: none; font-size: 15px; font-weight: 600; padding: 12px 18px; border-radius: var(--radius-small); min-height: 44px; box-sizing: border-box; display: inline-flex; align-items: center; gap: 8px; }
+
+.header__toggle { display: none; }
+.header__panel { display: contents; }
+@media (max-width: 63.999rem) {
+  .header__layout-2 { padding-block: 12px; gap: 0 16px; }
+  .header__toggle:not([hidden]) { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 12px; background: transparent; border: 1px solid var(--color-map-line); border-radius: var(--radius-small); color: var(--color-ink); font-size: 15px; font-weight: 600; cursor: pointer; }
+  .header__panel { display: flex; flex-direction: column; flex: 1 1 100%; order: 5; margin-top: 12px; border-top: 1px solid var(--color-line); }
+  .header__panel[hidden] { display: none; }
+  .header__nav { order: 0; flex: 0 0 auto; flex-direction: column; flex-wrap: nowrap; gap: 0; justify-content: flex-start; font-size: 16px; }
+  .header__link { min-height: 48px; padding: 0; box-sizing: border-box; border-bottom: 1px solid var(--color-line); }
+  .header__link-2 { order: 0; margin-top: 14px; justify-content: center; min-height: 48px; }
+}
 
 /* Composição atual: introdução editorial, vitrine dos serviços e entregas em módulos. */
 .hero__section { position: relative; isolation: isolate; border-bottom: 1px solid var(--color-line); }
@@ -126,6 +138,14 @@ section[id], #produtos { scroll-margin-top: 24px; }
 .benefits__number { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; background: var(--color-surface); color: var(--color-accent); border: 1px solid var(--color-line); border-radius: 8px; font-size: 12px; font-weight: 600; }
 .benefits__subtitle { margin: 16px 0 10px; font-size: 21px; letter-spacing: -0.02em; font-weight: 600; line-height: 1.2; }
 .benefits__copy { margin: 0; color: var(--color-muted); font-size: 15px; }
+@media (max-width: 47.999rem) {
+  .services__grid { gap: 12px; }
+  .services__card { padding: 18px 16px; border-radius: 6px; }
+  .services__card-top { margin-bottom: 20px; }
+  .services__deliverables { margin-top: 22px; }
+  .services__deliverables li { border-radius: 3px; }
+  .benefits__number { border-radius: 4px; }
+}
 @media (min-width: 48rem) {
   .services__grid { grid-template-columns: repeat(12, minmax(0, 1fr)); }
   .services__card--site, .services__card--support { grid-column: span 7; }

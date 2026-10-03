@@ -79,6 +79,21 @@
 .overview__contact-path span:last-child { color: var(--color-accent); }
 .overview__contact-path svg { flex: 0 0 auto; color: var(--color-muted); }
 
+@media (max-width: 47.999rem) {
+  .overview__section { padding-inline: 10px; }
+  .overview__showcase { gap: 6px; padding: 6px; border-radius: 10px; }
+  .overview__panel { border-radius: 6px; }
+  .overview__site { gap: 22px; padding: 18px 14px; }
+  .overview__site-pages { gap: 6px; }
+  .overview__site-page { padding: 12px 8px; border-radius: 4px; }
+  .overview__site-page dt { font-size: 13px; }
+  .overview__local > .overview__panel-label { padding: 16px 16px 0; }
+  .overview__town { padding: 0 16px 16px; }
+  .overview__town-meta { right: 16px; bottom: 16px; }
+  .overview__contact { padding: 18px 16px; }
+  .overview__contact-path span { padding: 8px 10px; border-radius: 4px; }
+}
+
 @media (min-width: 48rem) {
   .overview__section { transform: translateY(-24px); }
   .overview__showcase { grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); }
