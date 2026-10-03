@@ -24,23 +24,12 @@
       </div>
 
       <div class="overview__panel overview__local">
-        <p class="overview__panel-label">Presença local</p>
-        <div class="overview__map">
-          <svg viewBox="0 0 480 480" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false" class="overview__graphic">
-            <g fill="none" stroke="var(--color-map-line)" stroke-width="1">
-              <path d="M-20 70 L500 40"></path><path d="M-20 140 L500 112"></path><path d="M-20 212 L500 186"></path><path d="M-20 290 L500 262"></path><path d="M-20 362 L500 336"></path><path d="M-20 436 L500 410"></path>
-              <path d="M60 -20 L84 500"></path><path d="M132 -20 L156 500"></path><path d="M210 -20 L232 500"></path><path d="M300 -20 L322 500"></path><path d="M372 -20 L394 500"></path><path d="M446 -20 L466 500"></path>
-              <path d="M-20 300 C 120 250, 200 330, 320 240 S 460 160, 520 190"></path>
-              <path d="M180 -20 C 200 120, 120 220, 170 330 S 260 460, 240 520"></path>
-            </g>
-            <g fill="none" stroke="var(--color-map-road)" stroke-width="2.5">
-              <path d="M-20 470 L500 10"></path><path d="M-20 212 L500 186"></path>
-            </g>
-            <circle cx="268" cy="199" r="46" fill="none" stroke="var(--color-accent)" stroke-opacity="0.18" stroke-width="1"></circle>
-            <circle cx="268" cy="199" r="24" fill="none" stroke="var(--color-accent)" stroke-opacity="0.35" stroke-width="1"></circle>
-            <rect x="261" y="192" width="14" height="14" fill="var(--color-accent)"></rect>
-          </svg>
-          <p class="overview__map-label">Maringá e região</p>
+        <p class="overview__panel-label"><span>Presença local</span><span aria-hidden="true">02</span></p>
+        <div class="overview__town">
+          <p class="overview__town-name">Maringá</p>
+          <div class="overview__town-rule" aria-hidden="true"><span></span></div>
+          <p class="overview__town-region">e região</p>
+          <p class="overview__town-meta" aria-hidden="true">busca · presença · contato</p>
         </div>
       </div>
 
@@ -76,10 +65,13 @@
 .overview__site-page dt { font-size: 14px; font-weight: 600; }
 .overview__site-page dd { margin: 6px 0 0; font-size: 12px; color: var(--color-dark-secondary); }
 .overview__local { overflow: hidden; }
-.overview__local > .overview__panel-label { padding: 18px 22px 0; }
-.overview__map { position: relative; height: 164px; margin-top: 12px; background: var(--color-surface); }
-.overview__graphic { display: block; width: 100%; height: 100%; }
-.overview__map-label { position: absolute; left: 18px; bottom: 14px; margin: 0; padding: 6px 10px; background: var(--color-white); border: 1px solid var(--color-line); border-radius: 3px; color: var(--color-muted); font-size: 13px; font-weight: 600; }
+.overview__local > .overview__panel-label { display: flex; justify-content: space-between; padding: 18px 22px 0; }
+.overview__town { position: relative; height: 164px; margin-top: 12px; padding: 0 22px 18px; display: flex; flex-direction: column; justify-content: flex-end; }
+.overview__town-name { margin: 0; font-size: clamp(38px, 4.4vw, 60px); font-weight: 600; line-height: 1; letter-spacing: -0.045em; text-transform: uppercase; }
+.overview__town-rule { position: relative; height: 9px; margin: 14px 0 8px; background: linear-gradient(var(--color-map-road), var(--color-map-road)) 0 4px / 100% 1px no-repeat, repeating-linear-gradient(90deg, var(--color-map-road) 0 1px, transparent 1px 24px) 0 0 / 100% 9px no-repeat; }
+.overview__town-rule span { position: absolute; left: 62%; top: 0; width: 9px; height: 9px; background: var(--color-accent); }
+.overview__town-region { margin: 0; color: var(--color-muted); font-size: 17px; font-weight: 600; }
+.overview__town-meta { position: absolute; right: 22px; bottom: 18px; margin: 0; color: var(--color-muted); font-size: 12px; font-weight: 600; }
 .overview__contact { padding: 22px; display: flex; flex-direction: column; justify-content: space-between; gap: 16px; }
 .overview__panel-title { margin: 0; font-size: 25px; font-weight: 600; line-height: 1.15; letter-spacing: -0.025em; }
 .overview__contact-path { display: flex; align-items: center; gap: 12px; font-size: 13px; font-weight: 600; }
