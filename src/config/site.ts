@@ -9,7 +9,7 @@ export const site = {
   email: '',
   address: '',
   cnpj: '',
-  cymhUrl: '', // URL HTTPS real do projeto; não inferir pelo nome.
+  cymhUrl: 'https://cymhseguros.com.br/', // URL HTTPS real do projeto; não inferir pelo nome.
   socialImage: '', // Caminho local de uma imagem PNG/JPEG/WebP confirmada.
 };
 

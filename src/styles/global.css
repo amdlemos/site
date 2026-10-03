@@ -202,8 +202,10 @@ section[id], #produtos { scroll-margin-top: 24px; }
 .case__shot-bar { display: flex; gap: 6px; padding: 9px 12px; }
 .case__shot-bar span { width: 6px; height: 6px; background: var(--color-dark-muted); }
 .case__shot img { display: block; width: 100%; height: auto; }
-.case__layout-6--phone { padding: 0; border: 1px solid var(--color-dark-line); background: var(--color-dark-line); overflow: hidden; align-items: flex-start; }
-.case__layout-6--phone img { display: block; width: 58%; height: auto; margin: 12px auto 0; border: 2px solid var(--color-dark-muted); border-bottom: 0; border-radius: 10px 10px 0 0; }
+.case__layout-6.case__layout-6--shot { padding: 0; border: 1px solid var(--color-dark-line); background: var(--color-dark-line); overflow: hidden; border-radius: var(--radius-small); }
+.case__layout-6.case__layout-6--shot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top left; }
+.case__layout-6.case__layout-6--phone { padding: 0; border: 1px solid var(--color-dark-line); background: var(--color-dark-line); overflow: hidden; align-items: flex-start; }
+.case__layout-6.case__layout-6--phone img { display: block; width: 58%; height: auto; margin: 12px auto 0; border: 2px solid var(--color-dark-muted); border-bottom: 0; border-radius: 10px 10px 0 0; }
 .case__layout-5 { margin-top: 12px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .case__layout-6 { aspect-ratio: 4 / 3; border: 1px dashed var(--color-muted); display: flex; align-items: center; justify-content: center; text-align: center; padding: 12px; box-sizing: border-box; color: var(--color-dark-muted); font-size: 13px; }
 .process__section { border-bottom: 1px solid var(--color-line); }
