@@ -32,7 +32,8 @@
 }
 
 html { background: var(--color-paper); color: var(--color-ink); }
-body { margin: 0; font-family: var(--font-sans); font-size: 17px; line-height: 1.55; }
+body { margin: 0; font-family: var(--font-sans); font-size: 17px; line-height: 1.55; background-image: radial-gradient(var(--color-line) 1px, transparent 1px); background-size: 20px 20px; }
+.page-shell { position: relative; box-sizing: border-box; width: 100%; max-width: 1280px; margin-inline: auto; border-inline: 1px solid var(--color-line); background: var(--color-paper); }
 main { display: block; }
 button { font-family: inherit; border: 0; }
 button:disabled { cursor: not-allowed; opacity: 1; }

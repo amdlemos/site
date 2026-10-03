@@ -52,7 +52,9 @@ const structuredData = JSON.stringify(organization).replace(/</g, '\\u003c');
     <script type="application/ld+json" is:inline set:html={structuredData} />
   </head>
   <body>
-    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-    <slot />
+    <div class="page-shell">
+      <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+      <slot />
+    </div>
   </body>
 </html>
