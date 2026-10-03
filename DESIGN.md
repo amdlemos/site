@@ -1,64 +1,55 @@
-# AMDLEMOS — referência de identidade e home
+# AMDLEMOS — identidade e composição da home
 
-Fonte única: AMDLEMOS — identidade e home.html (621854 bytes), SHA-256 eab3f75a010d2a24a595be3d7f4aee128aa624afd5ab3817745d78e4e089ec43. O arquivo permanece intacto, somente para consulta. A inspeção percorreu o manifesto raiz, os três bundles gzip/base64, seus templates e recursos incorporados; não confundiu a galeria de pranchas ou o runtime com a marca.
+## Referência preservada
 
-## Pranchas e empacotamento
+AMDLEMOS — identidade e home.html (621854 bytes), SHA-256 eab3f75a010d2a24a595be3d7f4aee128aa624afd5ab3817745d78e4e089ec43, permanece intacto, somente para consulta. A inspeção original percorreu o manifesto raiz, os três bundles gzip/base64, seus templates e recursos incorporados; a galeria de pranchas e seu runtime não são elementos da marca.
 
-A prancha Identidade — marca, cor, tipo mede 1440 × 1720; Home — desktop mede 1440 × 5600; Home — mobile (390px) mede 390 × 8000 no iframe externo. A galeria tem fundo e rótulos próprios, que não pertencem ao site. O wrapper mobile interno tem 390 × 9200 com overflow hidden e importa Main.dc.html: é a mesma composição de desktop, com flex-wrap, auto-fit e tamanhos fluidos, sem uma folha mobile distinta. A página implementada deixa a altura natural, para que nada fique recortado.
+A prancha Identidade — marca, cor, tipo mede 1440 × 1720; Home — desktop, 1440 × 5600; Home — mobile, 390 × 8000 no iframe externo. O wrapper mobile interno de 390 × 9200 importa a composição de desktop com flex-wrap e auto-fit. A home atual tem altura natural. React, preview, iframes, estilos do editor e fontes remotas pertencem à infraestrutura do artefato e não foram incorporados ao site.
 
-Os manifests incorporam DC/support, React 18, lógica de preview, comunicação entre iframes, estilos do editor e a fonte. Esses itens são infraestrutura de autoria, não elementos de design. O site não copia esse runtime, iframes, placeholders de loading, scripts de substituição, seletores do editor ou fontes remotas.
+A primeira implementação reproduzia a composição do artefato. O usuário autorizou uma nova apresentação: “Siga no padrão filament mantendo nossa identidade de cores”. A referência de identidade continua vinculante; a composição antiga deixa de ser o alvo de reprodução.
 
-## Marca e arquitetura
+## Marca, paleta e fonte
 
-Wordmark amdlemos em minúsculas, Instrument Sans, peso CSS 700, entreletra −5,5% na prancha principal; o ponto é quadrado, não circular, em verde. Na home a entreletra do wordmark é −4,5%, com 26 px no header e 30 px no footer; o ponto mede 7 e 8 px respectivamente. Sobre escuro usa verde claro. A extensão amdlemos.sites preserva marca-mãe, ponto e sufixo regular em grafite médio; Brand.astro a suporta sem introduzir uma assinatura ausente na home. O exemplo amdlemos.treinamentos é marcado como futuro na identidade e não comprova um produto disponível.
+Wordmark amdlemos em minúsculas, Instrument Sans, peso CSS 700. O ponto é quadrado, verde, com 7 px no header e 8 px no footer. A home mantém entreletra −4,5%, tamanho de 26 px no header e 30 px no footer. Sobre escuro usa verde claro. Brand.astro continua suportando a extensão sites, sem introduzi-la na assinatura da home. Treinamentos e outros produtos citados no artefato não comprovam disponibilidade.
 
-Favicon: quadrado verde com a minúscula e ponto brancos, derivado do ícone de 64 px da prancha. Uma imagem social raster permanece pendente: não anunciamos o SVG como imagem de card. Fornecer um PNG/JPEG/WebP local fiel à marca e configurar socialImage; até lá os metadados sociais usam título/descrição e card summary, sem imagem fictícia.
+Os tokens de cor permanecem iguais: Verde Maringá #0A6B4B; grafite #141618; grafite médio #4A4F54; linhas #E3E4E0; papel #FAFAF8; verde claro #3FB58A somente sobre escuro. Apoios: branco #FFFFFF, superfície #F0F1ED, texto escuro #F3F4F1, secundários escuros #9CA19A e #C9CCC5, traçado #D3D6CF e #B9BDB4, divisória escura #2A2D30.
 
-## Paleta e tipografia
+Instrument Sans é a única família. O WOFF2 Latin local de 30092 bytes é a fonte incorporada original, identificada como Regular sem eixo variável; o original declara o mesmo arquivo para 400, 500, 600 e 700. Preservamos arquivo e faixa CSS, sem download silencioso. Corpo 17 px/1,55; descrições 15–21 px; labels 12–14 px em peso 600. Títulos usam peso 600 e tracking fechado. Os tokens de escala de H1/H2 continuam iguais; o H1 centralizado passa a usar line-height 1,04.
 
-Verde Maringá #0A6B4B; grafite #141618; grafite médio #4A4F54; linhas #E3E4E0; papel #FAFAF8; verde claro #3FB58A somente sobre escuro. Apoios da home: branco #FFFFFF, superfície #F0F1ED, texto escuro #F3F4F1, secundários escuros #9CA19A e #C9CCC5, linhas do mapa #D3D6CF e #B9BDB4. Os tokens CSS registram esses valores sem uma nova paleta.
+O favicon deriva do ícone de 64 px da prancha. A imagem social raster permanece pendente: socialImage aceita um arquivo local real, e nenhum SVG é anunciado como imagem de card.
 
-Instrument Sans é a única família. Corpo 17 px/1,55; descrições menores 15–16 px; labels 13–14 px, peso 600, caixa alta e tracking 0,08 em. Títulos em 600 e tracking fechado. H1 clamp(42 px, 6,4% da largura, 92 px)/0,98; H2 comum clamp(30 px, 3,4%, 46 px)/1,08. O caso e contato têm escalas próprias, preservadas no CSS.
+## Composição atual
 
-Há somente um WOFF2 Latin incorporado, de 30092 bytes, identificado como Instrument Sans Regular sem eixo variável. O original declara esse mesmo arquivo para 400, 500, 600 e 700; as faces Latin Extended referenciam URLs remotas e não estão incorporadas. Preservamos o arquivo e a faixa CSS dos quatro pesos, sem substituição ou download silencioso. Os caracteres portugueses usados no texto estão cobertos. A aparência final dos pesos e o favicon ainda precisam de conferência no navegador.
+A inspiração é a apresentação pública atual de [Filament](https://filamentphp.com/): promessa central, demonstração visual e catálogo de capacidades. Essa lógica é adaptada a uma empresa que cria sites, integrações e produtos de software para pequenos negócios de Maringá; a página não apresenta frameworks ao cliente. Não copiamos ativos, logotipo, mascote, fontes, paleta, textos ou estatísticas da Filament.
 
-## Grid, composição e linguagem visual
+A sequência atual é header; hero; serviços; benefícios; caso CYMH; processo; sobre; FAQ; contato; footer. Hero, serviços e benefícios passam a ter componentes e seletores próprios da nova composição. Header, caso e demais seções conservam seu conteúdo e seus estilos.
 
-O max-width original de 1240 px é da caixa de conteúdo, à qual se somam gutters clamp(20 px, 5% da largura, 64 px). Em 1440 px, a caixa externa mede 1368 px e o conteúdo começa em x=100 px. Não aplicar um reset global border-box: ele mudaria essa geometria. A implementação troca cqi por vw porque a referência usa um container que ocupa a largura inteira da viewport. Flex-bases, gaps e auto-fit são preservados para reproduzir as quebras naturais, incluindo a navegação sem menu hambúrguer.
+O hero tem título centralizado com ênfase verde, descrição e duas ações. Abaixo há uma vitrine estática: um módulo grafite representa a estrutura do site, um módulo mostra o traçado local e outro representa o caminho de contato. O desenho do mapa reaproveita os paths, círculos e ponto quadrado da referência dentro de uma superfície menor. A legenda identifica a vitrine como representação dos serviços; não é um site de cliente, uma listagem do Google nem uma prova de resultado. Seus blocos são texto e diagramas, sem controles simulados. Os quatro links abaixo levam às entregas de serviços.
 
-Ordem: header com navegação e CTA; hero com título, descrição, ações e mapa; benefícios em quatro colunas; serviços editoriais; caso CYMH em fundo grafite; processo em quatro etapas; sobre com foto pendente; FAQ em details/summary; CTA verde; footer grafite. Divisórias finas, cantos de 3 px nas ações e 2 px na etiqueta Produtos, poucos fundos e espaços generosos. O mapa é o SVG original: traçado fino, duas vias mais fortes, duas circunferências e um único ponto quadrado. Não usar foto de banco, mockup de aparelho, nova ilustração ou imagens geradas.
+Serviços usam uma grade de doze colunas no desktop, com módulos 7/5 na primeira linha e 5/7 na segunda. Cada entrega tem título, descrição, ícone vetorial simples e uma lista de escopo. O módulo de suporte usa grafite; os demais usam branco, papel e superfície. Produtos próprios continuam em uma faixa separada, explicitamente planejados e com detalhes pendentes.
 
-## Espaçamento e tokens de dimensão
+Benefícios usam uma introdução editorial lateral e quatro itens em grade 2 × 2 no desktop. Os números são apenas marcadores de ordem, não métricas. Texto comercial e intenção são preservados; as mudanças locais de texto no hero e SEO evitam apresentar descoberta em busca como garantia.
 
-| Token existente | Valor CSS | Aplicação |
-| --- | --- | --- |
-| --content-width | 1240px | Limite da caixa de conteúdo, antes dos gutters |
-| --gutter | clamp(20px, 5vw, 64px) | Padding horizontal dos containers |
-| --section-space | clamp(56px, 7vw, 112px) | Padding vertical de serviços, caso, processo, sobre e FAQ |
-| --radius-small | 3px | Cantos das ações de header, hero e contato |
+## Geometria, superfícies e ações
 
-Os demais espaçamentos preservam valores locais do desenho. Proximidade usa 4, 6, 8, 10, 12 e 14 px; texto e pequenos blocos usam 16, 18, 20, 22, 24 e 28 px; composição usa 32, 36, 40, 48, 56 e 64 px. Header: padding vertical 18 px e gap 12 × 32 px; navegação: 4 × 28 px. Hero: topo clamp(48px, 8vw, 112px), base clamp(56px, 7vw, 96px), gap de 56 px; ações após 40 px, com gap 12 × 24 px. Benefícios: padding vertical clamp(56px, 7vw, 96px), grade após 56 px e gap 40 × 32 px. Serviços e caso: gap 48 × 64 px; sobre e FAQ: 40 × 64 px. Processo: grade após 56 px, gap 32 px. Contato: padding vertical clamp(56px, 8vw, 120px), gap 32 × 64 px. Footer: 64 px no topo e 40 px na base; divisória após 56 px, com padding superior de 20 px. Esses valores não são novos tokens de implementação.
+O limite de conteúdo continua 1240 px, antes dos gutters clamp(20 px, 5vw, 64 px). Não há reset global border-box: a geometria das seções preservadas continua igual. Box-sizing border-box fica restrito à vitrine, seus elementos internos, cards de serviços e itens de benefícios.
 
-## Links, ações e superfícies
+O espaçamento de seções continua clamp(56 px, 7vw, 112 px). A nova composição usa gaps de 16 px para módulos, 28–40 px para texto e 64 px para a separação editorial ampla. A vitrine tem raio de 24 px e módulos de 16 px, com bordas finas e sem sombras adicionais; essas superfícies substituem as antigas linhas de serviços. Ações mantêm o raio original de 3 px. Não há foto de banco, mockup de dispositivo ou imagem gerada.
 
-Links de navegação: 15 px, peso 500, grafite médio, sem sublinhado, padding vertical 10 px. Links editoriais do hero e caso: peso 600, sublinhado de 1 px afastado 6 px do texto; o caso usa texto claro sobre grafite. Footer: 15 px, secundário claro, sem sublinhado. O hover aumenta a espessura dos sublinhados existentes para 2 px. Foco de teclado: outline de 3 px, afastado 5 px, verde sobre claro, verde claro sobre grafite e branco sobre o contato verde.
-
-Ações retangulares: peso 600, radius --radius-small e box-sizing border-box. Header: grafite/branco, texto 15 px, padding 12 × 18 px, altura mínima 44 px. Hero: verde/branco, texto 17 px, padding 16 × 26 px, altura mínima 52 px. Contato: branco/grafite, texto 18 px, padding 18 × 24 px, altura mínima 56 px, seta original de 20 px. Com WhatsApp pendente, mantém a mesma superfície em button nativamente desativado, opacidade 1 e aviso textual; com número confirmado, renderiza um link real.
-
-Benefícios são colunas editoriais com linha superior de 2 px e padding superior de 20 px. Serviços são linhas com padding vertical de 28 px e divisórias de 1 px. Mapa: quadrado 1:1, superfície #F0F1ED, borda de 1 px; seu rótulo tem padding 12 × 14 px e a sombra discreta original 0 1px 2px rgba(20,22,24,0.06). Capturas pendentes da CYMH: proporção 4:3, borda tracejada de 1 px, padding de 24 px na principal e 12 px nas menores. Foto pendente de Maringá: 5:4, padding 24 px, superfície e borda iguais às do mapa. Não há um sistema de cards arredondados ou sombras adicionais.
+Links do hero e header continuam destinos reais da mesma página. O foco mantém outline de 3 px: verde sobre claro, verde claro no caso/footer, branco no contato verde. O contato final continua desativado com aviso enquanto não há WhatsApp confirmado; com número real, renderiza link. Os diagramas não recebem tabindex, links ou aparência de ações clicáveis.
 
 ## Regras responsivas
 
-As quebras usam flex-wrap, min-width: 0 e auto-fit, sem media queries por largura. Bases do hero: texto 560 px e figura 380 px, com gap 56 px. Serviços e FAQ: 300 px + 560 px, gap 64 px. Caso: 420 px + 420 px, gap 64 px. Sobre: 360 px + 480 px, gap 64 px. Contato: título 520 px e ação até 360 px, gap 64 px. A ordem de cada bloco é a ordem do HTML; o header mantém navegação de ordem 3 e CTA de ordem 4, com quebra em linhas.
+Em 390 px, o conteúdo tem gutters de 20 px. Hero, serviços e benefícios ficam em coluna única; ações e links de capacidades quebram naturalmente. A estrutura esquemática do site conserva três pequenos blocos com minmax(0, 1fr), textos curtos e altura natural. O traçado é decorativo e pode ser recortado dentro de seu módulo, sem cortar texto.
 
-Grades auto-fit: benefícios com mínimo de 240 px e gap horizontal 32 px; processo com mínimo de 220 px e gap 32 px; dados institucionais com mínimo de 160 px e gap 20 px; colunas do footer com mínimo de 150 px e gap 32 px. As duas capturas menores do caso mantêm duas colunas minmax(0, 1fr), com gap 12 px. Em 390 px, o gutter chega ao mínimo de 20 px e os blocos principais empilham; em 1440 px, o gutter chega a 64 px e a composição principal usa colunas. As larguras intermediárias refluem pelas bases declaradas, não por layouts novos; por exemplo, hero e serviços já empilham em 1024 px, enquanto caso e sobre ainda podem ocupar duas colunas. Em telas largas, o conteúdo para em 1240 px. A altura é natural, sem o recorte fixo da prancha mobile. Redução de movimento desliga animações/transições e mantém scroll sem animação. Ausência de overflow em 390/768/1024/1440/1920 permanece uma verificação de navegador pendente.
+A partir de 48rem (768 px), a vitrine passa a duas colunas, com o site ocupando duas linhas e os módulos local/contato na coluna direita. Serviços passam à grade 7/5 e 5/7; os benefícios têm duas colunas. A partir de 64rem (1024 px), a introdução de benefícios fica ao lado da grade. Nenhum bloco recebe altura fixa para texto; min-width: 0 e minmax(0, ...) permitem reflow.
 
-## Conteúdo e diferenças intencionais
+As demais seções continuam usando suas bases flex e auto-fit originais, incluindo o header sem menu hambúrguer. O caso CYMH conserva duas capturas menores lado a lado. Em telas largas, o conteúdo para em 1240 px. A ordem visual acompanha a ordem do HTML. Redução de movimento mantém scroll sem animação e desliga animações/transições.
 
-Preservamos títulos, tom e conteúdo comercial. Ajustes locais tornam explícitos o que a referência não comprova: estatística sobre visitas mobile removida; nomes/status de produtos tratados como planejados; preço, prazo, contato, endereço e CNPJ pendentes sem números ou domínio fictícios; prazo de resposta pendente. O caso CYMH continua sendo o projeto institucional e de SEO local informado, sem números ou promessa de posição. As observações originais são identificadas como relato com evidências pendentes, e capturas, resultados e depoimento autorizado permanecem placeholders visíveis. A foto de Maringá também continua pendente.
+## Conteúdo, limites e verificação
 
-Adicionamos landmarks sem mudar a ordem, um único H1, skip link, foco visível e FAQ nativa; corrigimos viewBox e links internos sem destino. O contato final só vira link quando existe número confirmado. Não há formulário na referência, portanto não adicionamos um. A resposta estática não executa JavaScript de interface; application/ld+json é somente dados estruturados.
+Não inventamos resultados, estatísticas, ranking, preço, prazo, endereço, contato, CNPJ, depoimento ou disponibilidade de produto. O caso CYMH fica fora desta mudança, inclusive seus placeholders de capturas e evidências pendentes. Foto de Maringá e imagem social também continuam pendentes. Os dados confirmáveis permanecem em site.ts e o estado inicial conserva noindex, contato vazio e sitemap sem URL.
 
-## Verificação visual
+A página tem landmarks, um H1, skip link, foco visível, FAQ em details/summary e dados estruturados Organization. O HTML é estático; application/ld+json é apenas dados. Não há hidratação, JavaScript de interface, dependência nova, formulário operacional, backend, CMS, blog, analytics ou deploy.
 
-Comparar o artefato e o site em 1440 e 390 px; conferir também 768, 1024 e 1920 px, overflow, navegação e teclado. Não há capturas validadas neste sandbox: o ambiente bloqueia sockets HTTP e a inicialização do Chromium. A geometria foi conferida no código da referência; isso não substitui o aceite visual. Build/check também dependem da instalação real de dependências.
+Validar com npm run check, npm run build e git diff --check. Conferir a composição atual em 390, 768, 1024, 1440 e 1920 px, altura natural, overflow, teclado e destinos internos. Comparar a identidade com o artefato, e a hierarquia visual com a referência pública da Filament. Build/check são executáveis com as dependências instaladas; a inspeção visual em navegador continua pendente se o ambiente bloquear HTTP/Chromium. Não declarar essa inspeção aprovada a partir de leitura de CSS.
