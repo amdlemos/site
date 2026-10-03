@@ -1,5 +1,7 @@
 ---
 import { cymhUrl } from '../config/site';
+import desktopHome from '../assets/cymh/home-desktop.webp';
+import mobileHome from '../assets/cymh/home-mobile.webp';
 ---
 <section id="caso" aria-labelledby="caso-t" class="case__section">
 <div class="case__layout">
@@ -20,10 +22,10 @@ import { cymhUrl } from '../config/site';
 {cymhUrl ? <a href={cymhUrl} class="case__link">Visitar o site da CYMH</a> : <span class="case__link">Site da CYMH · URL pendente</span>}
 </div>
 <div class="case__layout-3">
-<div class="case__layout-4">[Placeholder · captura real do site da CYMH: página inicial no desktop, em tamanho natural, sem moldura de aparelho]</div>
+<figure class="case__shot"><div class="case__shot-bar" aria-hidden="true"><span></span><span></span><span></span></div><img src={desktopHome.src} width={desktopHome.width} height={desktopHome.height} alt="Página inicial do site da CYMH Corretora de Seguros no desktop, com o título Confiança e solidez para proteger você." loading="lazy" decoding="async" /></figure>
 <div class="case__layout-5">
 <div class="case__layout-6">[Placeholder · evidência de busca local, recortada]</div>
-<div class="case__layout-6">[Placeholder · página interna ou versão mobile]</div>
+<div class="case__layout-6 case__layout-6--phone"><img src={mobileHome.src} width={mobileHome.width} height={mobileHome.height} alt="Página inicial do site da CYMH no celular." loading="lazy" decoding="async" /></div>
 </div>
 <p class="pending-note pending-note--dark">[Placeholder · depoimento autorizado da CYMH pendente]</p>
 </div>
