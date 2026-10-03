@@ -1,0 +1,20 @@
+---
+import Brand from './Brand.astro';
+import { site } from '../config/site';
+---
+<footer class="footer__section">
+<div class="footer__layout">
+<div class="footer__layout-2">
+<div class="footer__layout-3">
+<Brand dark />
+<p class="footer__copy">Criação de sites, SEO local e manutenção para empresas de Maringá e região.</p>
+</div>
+<div class="footer__layout-4">
+<div class="footer__layout-5"><p class="footer__copy-2">Serviços</p><a href="#servicos" class="footer__link">Criação de sites</a><a href="#servicos" class="footer__link">SEO local</a><a href="#servicos" class="footer__link">Manutenção</a></div>
+<div class="footer__layout-5"><p class="footer__copy-2">Empresa</p><a href="#sobre" class="footer__link">Sobre</a><a href="#caso" class="footer__link">Casos</a><a href="#produtos" class="footer__link">Produtos</a></div>
+<div class="footer__layout-5"><p class="footer__copy-2">Contato</p><span>{site.address || '[Endereço pendente]'}</span><span>{site.phone || '[Telefone pendente]'}</span><span>{site.email || '[E-mail pendente]'}</span></div>
+</div>
+</div>
+<div class="footer__layout-6"><span>© 2026 AMDLEMOS · CNPJ {site.cnpj || '[CNPJ pendente]'}</span><span class="footer__mark">23°25′ S · 51°56′ O</span></div>
+</div>
+</footer>

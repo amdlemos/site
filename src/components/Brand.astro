@@ -1,0 +1,10 @@
+---
+interface Props {
+  dark?: boolean;
+  extension?: 'sites';
+}
+const { dark = false, extension } = Astro.props;
+---
+<span class:list={['brand', { 'brand--dark': dark, 'brand--extended': extension }]}>
+  <span class="brand__name">amdlemos</span><span class="brand__dot" aria-hidden="true"></span>{extension && <span class="brand__extension">{extension}</span>}
+</span>

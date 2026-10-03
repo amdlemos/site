@@ -1,0 +1,13 @@
+---
+import { site, whatsappUrl } from '../config/site';
+---
+<section id="contato" aria-labelledby="contato-t" class="contact__section">
+<div class="contact__layout">
+<h2 id="contato-t" class="contact__title">Vamos conversar sobre o site da sua empresa?</h2>
+<div class="contact__layout-2">
+{whatsappUrl ? <a href={whatsappUrl} class="contact__link">Chamar no WhatsApp<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></a> : <button type="button" disabled aria-describedby="whatsapp-pending" class="contact__link">Chamar no WhatsApp<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></button>}
+<p class="contact__copy">Horário e prazo de resposta pendentes · {site.phone || '[Telefone pendente]'}</p>
+{!whatsappUrl && <p id="whatsapp-pending" class="pending-note pending-note--contact">WhatsApp pendente de configuração.</p>}
+</div>
+</div>
+</section>
